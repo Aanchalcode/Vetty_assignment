@@ -1,1 +1,7 @@
-# Vetty_assignment
+## SQL Data Analysis Challenge
+
+This repository contains the solutions (queries.sql) and analysis for the SQL Data Challenge, focusing on transactions and buyer behavior using the transactions and items tables.
+
+## Project Summary
+
+This project addresses eight specific data analysis challenges using SQL, drawing on transaction and item data. The core techniques employed range from basic filtering and aggregation to advanced window functions and correlated subqueries. Specifically, Q1 calculates monthly purchase counts excluding refunds by filtering on refund_item IS NULL, while Q2 identifies high-volume stores in October 2020 using WHERE and HAVING clauses. Q3 calculates the shortest refund interval in minutes using MIN(TIMESTAMPDIFF()). The solutions for Q4, Q5, and Q7 rely on the ROW_NUMBER() window function to accurately rank purchases chronologically per store or buyer, allowing us to find first orders, the most popular first-purchase item (requiring a join to the items table), and the exact second purchase, respectively. Q6 introduces conditional logic via a CASE statement combined with TIMESTAMPDIFF(HOUR) to flag refund eligibility within the 72-hour window. Finally, Q8 solves the second transaction timestamp problem without modern window functions, instead employing a correlated subquery that counts preceding transactions (COUNT(*) = 1) to find the second chronological order. All queries are located in the queries.sql file and require the tables to be populated for execution.
